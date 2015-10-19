@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="8556b91b-0fa2-4707-8278-ca127c3148ab" activeEnvironment="Default" name="CBR" resourceRoot="${projectDir}" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7374309f-37ed-446d-b378-bfad4d03143d" wsaVersion="NONE" name="DailyInfoSoap12" type="wsdl" bindingName="{http://web.cbr.ru/}DailyInfoSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx</con:endpoint></con:endpoints><con:operation id="ff7fdba5-34dc-4083-9494-30d204917ffc" isOneWay="false" action="http://web.cbr.ru/AllDataInfoXML" name="AllDataInfoXML" bindingOperationName="AllDataInfoXML" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2baa92a7-cdb5-4c82-b0e3-eb4561948ca5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://web.cbr.ru/">\r
+<con:soapui-project id="8556b91b-0fa2-4707-8278-ca127c3148ab" activeEnvironment="Default" name="CBR" resourceRoot="${projectDir}" soapui-version="5.1.3" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7374309f-37ed-446d-b378-bfad4d03143d" wsaVersion="NONE" name="DailyInfoSoap12" type="wsdl" bindingName="{http://web.cbr.ru/}DailyInfoSoap12" soapVersion="1_2" anonymous="optional" definition="http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx</con:endpoint></con:endpoints><con:operation id="ff7fdba5-34dc-4083-9494-30d204917ffc" isOneWay="false" action="http://web.cbr.ru/AllDataInfoXML" name="AllDataInfoXML" bindingOperationName="AllDataInfoXML" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2baa92a7-cdb5-4c82-b0e3-eb4561948ca5" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:web="http://web.cbr.ru/">\r
    <soap:Header/>\r
    <soap:Body>\r
       <web:AllDataInfoXML/>\r
@@ -4503,7 +4503,7 @@
          <web:ToDate>?</web:ToDate>\r
       </web:XVolXML>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://web.cbr.ru/XVolXML"/></con:call></con:operation></con:interface><con:testSuite id="2eb15c96-8acd-40e3-97f2-2400bff2b2a0" name="Конверт TestSuite"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="c6406d90-3009-40e5-89a2-a5b5b29886e4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCursOnDate TestCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy select code Vall" id="42ff87ce-72a6-46cd-a2ae-7495f4e6fe35"><con:settings/><con:config><script>	import java.util.Random;
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://web.cbr.ru/XVolXML"/></con:call></con:operation></con:interface><con:testSuite id="2eb15c96-8acd-40e3-97f2-2400bff2b2a0" name="Конверт TestSuite"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="c6406d90-3009-40e5-89a2-a5b5b29886e4" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCursOnDate TestCase" searchProperties="true"><con:settings/><con:testStep type="groovy" name="select code Vall" id="42ff87ce-72a6-46cd-a2ae-7495f4e6fe35"><con:settings/><con:config><script>	import java.util.Random;
 		
 		String[] vchCode =  [ "GBP", "BYR", "DKK", "USD", "EUR" ];
 		
@@ -4515,7 +4515,7 @@
 		userIdInStep.setPropertyValue("vchCode", vch);
 
 
-</script></con:config></con:testStep><con:testStep type="groovy" name="RandomeAmount" id="438a48f5-310f-425c-8f54-ec69d5f8c3d6"><con:settings/><con:config><script>import java.util.Random;
+</script></con:config></con:testStep><con:testStep type="groovy" name="RandomAmount" id="438a48f5-310f-425c-8f54-ec69d5f8c3d6"><con:settings/><con:config><script>import java.util.Random;
 
 def userIdInStep = testRunner.testCase.getTestStepByName("Properties");
 Random r = new Random();
@@ -4533,24 +4533,7 @@ userIdInStep.setPropertyValue("amount", i.toString());
 
 
 
-
-
-//	
-//	
-//	public static  amaunt() {
-//		Random randInt = new Random();
-//
-//		for (int i = 0; i &lt; 1000) {
-//			int amount = randInt.nextInt(i);
-//	
-//		return amount;
-//
-//		}
-//	}
-//
-
-//
-</script></con:config></con:testStep><con:testStep type="groovy" name="RandomeDate" id="8c2d09aa-850f-40ba-9422-4318f90d620f"><con:settings/><con:config><script>import java.text.SimpleDateFormat;
+</script></con:config></con:testStep><con:testStep type="groovy" name="RandomDate" id="8c2d09aa-850f-40ba-9422-4318f90d620f"><con:settings/><con:config><script>import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -4565,24 +4548,14 @@ System.out.println(output);
 log.info(output);
 //return output;
 def userIdInStep = testRunner.testCase.getTestStepByName("Properties");
-userIdInStep.setPropertyValue("randomeDate", output);</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="f0f5169e-291a-450d-8e51-ea3011418d52"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>randomeDate</con:name><con:value>2015-10-14</con:value></con:property><con:property><con:name>vchCode</con:name><con:value>BYR</con:value></con:property><con:property><con:name>amount</con:name><con:value>963</con:value></con:property><con:property><con:name>ccurse</con:name><con:value>36.1136</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="bee08b3e-cce8-46ce-b2e4-ff5ce887c0e5" name="GetCursOnDate"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DailyInfoSoap</con:interface><con:operation>GetCursOnDate</con:operation><con:request name="GetCursOnDate" id="bbe042b4-232d-4798-8f15-841ed0cb24ce"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://web.cbr.ru/">\r
+userIdInStep.setPropertyValue("randomeDate", output);</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="f0f5169e-291a-450d-8e51-ea3011418d52"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>randomeDate</con:name><con:value>2015-10-15</con:value></con:property><con:property><con:name>vchCode</con:name><con:value>USD</con:value></con:property><con:property><con:name>amount</con:name><con:value>738</con:value></con:property><con:property><con:name>ccurse</con:name><con:value>63.1248</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="request" id="bee08b3e-cce8-46ce-b2e4-ff5ce887c0e5" name="GetCursOnDate"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>DailyInfoSoap</con:interface><con:operation>GetCursOnDate</con:operation><con:request name="GetCursOnDate" id="bbe042b4-232d-4798-8f15-841ed0cb24ce"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.cbr.ru/DailyInfoWebServ/DailyInfo.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://web.cbr.ru/">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:GetCursOnDate>\r
          <web:On_date>${randomeDate}</web:On_date>\r
       </web:GetCursOnDate>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://web.cbr.ru/GetCursOnDate" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="transfer" name="Property Transfer" id="f5586e4e-cd84-4b25-8bb9-70e96fbee812" disabled="true"><con:settings/><con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="false" ignoreEmpty="false" transferToAll="false" entitize="false" transferChildNodes="false"><con:name>curse</con:name><con:sourceType>Response</con:sourceType><con:sourceStep>GetCursOnDate</con:sourceStep><con:sourcePath>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
-declare namespace ns1='http://web.cbr.ru/';
-declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
-declare namespace ns1='http://web.cbr.ru/';
-
-
-
-</con:sourcePath><con:targetType xsi:nil="true"/><con:targetStep>Properties</con:targetStep><con:type>XQUERY</con:type><con:upgraded>true</con:upgraded></con:transfers></con:config></con:testStep><con:testStep type="groovy" name="Groovy Script" id="6323716a-c999-4457-bfb6-800a6d5f53bd"><con:settings/><con:config><script>
-
-
-def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context);
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="be80779b-3853-43df-b48b-a8d298542155" name="Contains"><con:configuration><token>ValuteCursOnDate</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>NTLM</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://web.cbr.ru/GetCursOnDate" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="GetCursVal" id="6323716a-c999-4457-bfb6-800a6d5f53bd"><con:settings/><con:config><script>def groovyUtils = new com.eviware.soapui.support.GroovyUtils(context);
 def holder = groovyUtils.getXmlHolder('GetCursOnDate#Response');
 def valuteNodes = holder.getDomNodes("//ValuteCursOnDate");
 def userIdInStep = testRunner.testCase.getTestStepByName("Properties");
@@ -4608,84 +4581,7 @@ return cursRand;
 
 
 
-
-
-
-
-
-
-// create groovyUtils and XmlHolder for response of Request 1 request
-
-//def groovyUtils = new com.eviware.soapui.support.GroovyUtils( context )
-//def userIdInStep = testRunner.testCase.getTestStepByName("Properties");
-//
-//def holder = groovyUtils.getXmlHolder( "GetCursOnDate#Response" )
-////def i = holder.getXml() 
-//for( node1 in holder.getDomNodes('//ValuteCursOnDate') )
-//node1.
-/*
-if(node1.getNodeValue("//Vcurs")=="USD"){
-log.info it
-}
-
-/*
- log.info node1
-def emptyList = [] 
- for( node2 in holder['//Vcurs'] )
- log.info node2
- def vc =userIdInStep.getPropertyValue("vchCode");
-
-*/
-
-
-//def book = response.value.books.book
-
-
-
-
-
-//def userIdInStep = testRunner.testCase.getTestStepByName("Properties");
-//// loop item nodes in response message
-//vchCode = userIdInStep.getPropertyValue("//vchCode");
-//item = holder[ "//ValuteCursOnDate/Vcode"] ;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//for( item in holder[ "//ValuteCursOnDate" ])
-// 
-
-//if (vchCode in item){
-//	System.out.println(vchCode)
-//}
-
-//
-//log.info(i)
-//log.info(vchCode);
-
-
-
-</script></con:config></con:testStep><con:testStep type="groovy" name="Testtest" id="f88d9a5b-85c2-4dab-ae3c-f974f7083d31"><con:settings/><con:config><script>def userIdInStep = testRunner.testCase.getTestStepByName("Properties");
+</script></con:config></con:testStep><con:testStep type="groovy" name="Total" id="f88d9a5b-85c2-4dab-ae3c-f974f7083d31"><con:settings/><con:config><script>def userIdInStep = testRunner.testCase.getTestStepByName("Properties");
 def amount = userIdInStep.getPropertyValue("amount").toInteger();
 def ccurse = userIdInStep.getPropertyValue("ccurse");
 double valueCurs = Double.parseDouble(ccurse);
